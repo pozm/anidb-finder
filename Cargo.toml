@@ -1,0 +1,18 @@
+[package]
+name = "anidb-finder"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quick-xml = "*"
+redis = { version = "0.21", features = ["tokio-comp","r2d2","connection-manager"] }
+tokio = {version = "1.20.1", features = ["full"]}
+serde_json = "1.0.83"
+serde = {version = "1.0.143", features = ["derive"]}
+futures = "0.3.23"
+tracing = "0.1.36"
+
+flate2 = {version = "1.0.24",features = ["zlib-ng-compat"]}
+tracing-subscriber = "0.3.15"
